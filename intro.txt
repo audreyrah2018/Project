@@ -1,0 +1,51 @@
+
+# Python version
+import sys
+print('Python: {}'.format(sys.version))
+# scipy
+import scipy
+print('scipy: {}'.format(scipy.__version__))
+# numpy
+import numpy
+print('numpy: {}'.format(numpy.__version__))
+# matplotlib
+import matplotlib
+print('matplotlib: {}'.format(matplotlib.__version__))
+# pandas
+import pandas
+print('pandas: {}'.format(pandas.__version__))
+# scikit-learn
+import sklearn
+print('sklearn: {}'.format(sklearn.__version__))
+
+import pandas
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = pandas.read_csv(url, names=names)
+print(data.shape)
+
+
+import pandas
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = pandas.read_csv(url, names=names)
+print(data.shape)
+
+
+
+
+X = df.iloc[:, 1:5]
+y = df.iloc[:, 5]
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0) 
+print('There are {} samples in the training set and {} samples in the test set'.format(X_train.shape[0], X_test.shape[0]))
+
+
+
+
+filename = 'pima-indians-diabetes.data.csv'
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = pandas.read_csv(filename, names=names)
+print(data.shape)
